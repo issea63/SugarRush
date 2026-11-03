@@ -3,7 +3,7 @@ using UnityEngine.AI;
 
 public class PlayerMotor : MonoBehaviour
 {
-    Transform target;
+    public Transform target;
     NavMeshAgent agent;
 
     private void Awake()
@@ -14,7 +14,6 @@ public class PlayerMotor : MonoBehaviour
     {
         if(target != null)
         {
-            agent.SetDestination(target.position);
             FaceTarget();
         }
     }
@@ -37,7 +36,7 @@ public class PlayerMotor : MonoBehaviour
         agent.updateRotation = true;
         target = null;
     }
-    void FaceTarget()
+    public void FaceTarget()
     {
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
