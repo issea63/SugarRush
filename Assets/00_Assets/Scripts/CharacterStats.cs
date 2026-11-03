@@ -22,7 +22,7 @@ public class CharacterStats : MonoBehaviour
     {
         currentHealth = maxHealth;
     }
-    public void SetHealth(int amount)
+    public virtual void SetHealth(int amount)
     {
         amount -= armor.GetValue();
          currentHealth += amount;

@@ -21,6 +21,7 @@ public class BulletLogic : MonoBehaviour
         {
             other.GetComponent<EnemyStats>().SetHealth(-10);
             other.GetComponent<Enemy>().enemycanvas.SetActive(true);
+            other.GetComponent<EnemyController>().lookRadius = 10000000f;
         }
     }
 }

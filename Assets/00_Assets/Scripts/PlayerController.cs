@@ -33,9 +33,13 @@ public class PlayerController : MonoBehaviour
         RaycastHit raycastHit;
         if (Physics.Raycast(ray, out raycastHit, 100, interactLayer))
         {
+            motor.moveOn = true;
             Interactable interactable = raycastHit.collider.GetComponent<Interactable>();
             SetFocus(interactable);
+            gameObject.GetComponent<PlayerMotor>().FollowTarget(interactable);
+
         }
+
     }
 
     void SetFocus(Interactable newFocus)

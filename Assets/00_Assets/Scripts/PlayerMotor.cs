@@ -5,6 +5,8 @@ public class PlayerMotor : MonoBehaviour
 {
     public Transform target;
     NavMeshAgent agent;
+    public bool moveOn = false;
+    public bool rotationCorrect;
 
     private void Awake()
     {
@@ -15,6 +17,11 @@ public class PlayerMotor : MonoBehaviour
         if(target != null)
         {
             FaceTarget();
+        }
+        if(moveOn && target != null)
+        {
+            FaceTarget();
+            agent.SetDestination(target.position);
         }
     }
 
@@ -41,5 +48,10 @@ public class PlayerMotor : MonoBehaviour
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+        if (Quaternion.Angle(transform.rotation, lookRotation) < 3f)
+        {
+            rotationCorrect = true;
+        }
+        else rotationCorrect = false;
     }
 }

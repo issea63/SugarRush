@@ -34,6 +34,9 @@ public class Interactable : MonoBehaviour
     public virtual void Interact()
     {
         Debug.Log("Interacting with" + transform.name);
+        player.GetComponent<PlayerMotor>().MoveToPoint(gameObject.transform.position);
+        player.GetComponent<PlayerMotor>().FollowTarget(gameObject.GetComponent<Interactable>());
+
     }
     private void OnDrawGizmosSelected()
     {

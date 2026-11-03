@@ -1360,7 +1360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3648483534182446871, guid: ea241ea164e56f448a0619595de9e172, type: 3}
       propertyPath: lookRadius
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3724892118567061992, guid: ea241ea164e56f448a0619595de9e172, type: 3}
       propertyPath: m_Layer
@@ -1827,6 +1827,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5060960583067054663, guid: ea241ea164e56f448a0619595de9e172, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 897349960}
+    - target: {fileID: 5060960583067054663, guid: ea241ea164e56f448a0619595de9e172, type: 3}
       propertyPath: damage.baseValue
       value: -10
       objectReference: {fileID: 0}
@@ -2126,8 +2130,11 @@ MonoBehaviour:
   - {fileID: 266515430}
   - {fileID: 329445465}
   mana: 100
-  shotCooldown: 1
-  multiShotCooldown: 5
+  powerUp1: 1
+  powerUp2: 1
+  powerUp3: 1
+  powerUp4: 1
+  powerUp5: 1
   interactLayer:
     serializedVersion: 2
     m_Bits: 128
