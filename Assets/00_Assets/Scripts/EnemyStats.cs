@@ -10,7 +10,14 @@ public class EnemyStats : CharacterStats
     public override void Die()
     {
         base.Die();
-        Instantiate(objectSpawn,objectSpawnPos.position, Quaternion.identity);
+        //Instantiate(objectSpawn,objectSpawnPos.position, Quaternion.identity);
+        gameObject.GetComponent<EnemyController>().enabled = false;
+        gameObject.GetComponent<Enemy>().enabled = false;
+        gameObject.GetComponent<EnemyStats>().enabled = false;
+        gameObject.GetComponent<FriendController>().enabled = true;
+        gameObject.GetComponent<FriendStats>().enabled = true;
+        FriendManager.Instance.UpdateFriends();
+        gameObject.name = ("Friend");
         Debug.Log("Soy gay");
         aimargay = true;
     }
@@ -18,6 +25,8 @@ public class EnemyStats : CharacterStats
     {
         base.SetHealth(amount);
         canvas.SetActive(true);
+        EnemyController controller = gameObject.GetComponent<EnemyController>();
+        controller.lookRadius = 1000f;
     }
 
 }

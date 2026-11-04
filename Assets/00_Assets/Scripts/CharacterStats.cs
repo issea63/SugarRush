@@ -43,7 +43,7 @@ public class CharacterStats : MonoBehaviour
     {
         //animator.SetTrigger("Die");
         //yield return new WaitForSeconds(2f);
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
         yield return null;
     }
 }

@@ -29,6 +29,17 @@ public class Consumable : Item
                 PlayerManager.Instance.GetComponent<CharacterStats>().UpdateHealthUI();
             }
         }
+        if(itemName == "ManaPotion")
+        {
+            if(PowersManager.Instance.mana >= 100)
+            {
+                PowersManager.Instance.mana = 100;
+            }
+            else
+            {
+                PowersManager.Instance.mana += 20;
+            }
+        }
         Debug.Log("Using consumable item");
         RemoveFromInventory();
     }

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.TextCore.Text;
 
 public class PlayerController : MonoBehaviour
@@ -64,5 +65,12 @@ public class PlayerController : MonoBehaviour
         
         focus = null;
         motor.StopFollowTarget();
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Portal"))
+        {
+            FriendManager.Instance.LoadScene("ScenePrueba2");
+        }
     }
 }

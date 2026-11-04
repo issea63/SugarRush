@@ -31,6 +31,14 @@ public class PowersManager : MonoBehaviour
     public LayerMask interactLayer;
     PlayerMotor motor;
 
+    #region Singleton
+    public static PowersManager Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+    #endregion
     private void Start()
     {
         motor = GetComponent<PlayerMotor>();
