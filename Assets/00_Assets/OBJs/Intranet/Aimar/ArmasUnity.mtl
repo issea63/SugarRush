@@ -1,0 +1,45 @@
+# Blender 5.2.2 LTS MTL File: 'ArmasUnity.blend'
+# www.blender.org
+
+newmtl Material.001
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Aimar/Downloads/GroundDirtWeedsPatchy004/GroundDirtWeedsPatchy004_COL_2K.jpg
+map_Bump -bm 1.000000 C:/Users/Aimar/Downloads/GroundDirtWeedsPatchy004/GroundDirtWeedsPatchy004_NRM_2K.jpg
+
+newmtl Material.002
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Aimar/Downloads/others_0008_2k_3BhKYe/others_0008_color_2k.jpg
+map_Ns C:/Users/Aimar/Downloads/others_0008_2k_3BhKYe/others_0008_roughness_2k.jpg
+map_Bump -bm 1.000000 C:/Users/Aimar/Downloads/others_0008_2k_3BhKYe/others_0008_normal_opengl_2k.png
+
+newmtl Material.003
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Ns C:/Users/Aimar/Downloads/plastic_0010_2k_9akcRm/plastic_0010_roughness_2k.jpg
+map_Bump -bm 1.000000 C:/Users/Aimar/Downloads/plastic_0010_2k_9akcRm/plastic_0010_normal_opengl_2k.png
+
+newmtl Material.004
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
