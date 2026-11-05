@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 873789311912597379}
   - component: {fileID: 8742534156106286191}
   - component: {fileID: 3842780045714041969}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InventoryCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 494974082340228049}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

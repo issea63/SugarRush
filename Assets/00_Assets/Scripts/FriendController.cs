@@ -25,7 +25,6 @@ public class FriendController : MonoBehaviour
         {
             target = PlayerManager.Instance.player.transform;
         }
-        gameObject.GetComponent<FriendStats>().SetHealth(100);
         agent = GetComponent<NavMeshAgent>();
         characterCombat = GetComponent<CharacterCombat>();
     }

@@ -9,6 +9,7 @@ public class FriendStats : CharacterStats
     public bool aimargay = false;
     private void Start()
     {
+        gameObject.GetComponent<FriendStats>().SetHealth(100);
         canvas.SetActive(false);
     }
     public override void Die()
