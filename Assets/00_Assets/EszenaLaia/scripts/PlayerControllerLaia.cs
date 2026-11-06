@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControllerLaia : MonoBehaviour
 {
     bool isGrounded = true;
     bool jump = false;

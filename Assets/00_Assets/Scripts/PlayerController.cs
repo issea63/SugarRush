@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
         
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
         RaycastHit raycastHit;
-        if (Physics.Raycast(ray,out raycastHit,100,groundLayer))
+        if (Physics.Raycast(ray,out raycastHit,100, groundLayer))
         {
             motor.MoveToPoint(raycastHit.point);
             RemoveFocus();

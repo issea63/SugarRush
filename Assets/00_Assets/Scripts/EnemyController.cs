@@ -12,7 +12,7 @@ public class EnemyController : MonoBehaviour
     private void Start()
     {
         target = PlayerManager.Instance.player.transform;
-        agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>(); 
         characterCombat = GetComponent<CharacterCombat>();
     }
 
