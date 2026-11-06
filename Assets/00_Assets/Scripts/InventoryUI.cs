@@ -2,16 +2,36 @@ using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
+    #region Singleton
+
+    public static InventoryUI Instance;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+    }
+
+    #endregion
     InventorySlot[] slots;
     public GameObject inventoryUI;
 
     private void Start()
     {
+        inventoryUI = GameObject.FindWithTag("Inventory");
         Inventory.Instance.onItemChangedCallback += UpdateUI;
         slots = inventoryUI.GetComponentsInChildren<InventorySlot>();
     }
 
-    void OnInventory()
+    public void OnInventory()
     {
         inventoryUI.SetActive(!inventoryUI.activeSelf);
     }

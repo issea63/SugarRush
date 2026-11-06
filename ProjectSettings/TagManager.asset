@@ -8,6 +8,17 @@ TagManager:
   - CoinNumber
   - Portal
   - SpawnPoint
+  - MenuUI
+  - Inventory
+  - Damage
+  - Armor
+  - EnemyBar
+  - Canvas
+  - Boots
+  - Helmet
+  - Shoulders
+  - LaserBeam
+  - BossAttack
   layers:
   - Default
   - TransparentFX

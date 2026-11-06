@@ -3,10 +3,13 @@ using UnityEngine;
 public class BossStats : CharacterStats
 {
     public bool secondPhase = false;
+    
+    
 
     private void Start()
     {
         maxHealth = 350;
+        currentHealth = maxHealth;
     }
     public override void SetHealth(int amount)
     {

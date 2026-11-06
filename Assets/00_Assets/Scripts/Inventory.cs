@@ -16,7 +16,7 @@ public class Inventory : MonoBehaviour
         else
         {
             Instance = this;
-            //DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(this.gameObject);
         }
     }
     #endregion

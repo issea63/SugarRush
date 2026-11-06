@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering.HighDefinition;
 
 public class FriendController : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class FriendController : MonoBehaviour
 
     private void Start()
     {
+
         enemyController = GetComponent<EnemyController>();
         Destroy(enemyController);
         if(BossManager.Instance != null)
@@ -35,19 +37,19 @@ public class FriendController : MonoBehaviour
         float distance = Vector3.Distance(target.position, transform.position);
         if(BossManager.Instance != null)
         {
-            if (target == BossManager.Instance.boss.transform)
-            {
+            Transform bossTrans = BossManager.Instance.boss.transform;
+            
                 agent.speed = 5f;
-                agent.SetDestination(target.position);
+                agent.SetDestination(bossTrans.position);
 
-                if (distance <= agent.stoppingDistance && target == BossManager.Instance.boss.transform)
+                if (distance <= agent.stoppingDistance)
                 {
-                    CharacterStats ChStats = target.GetComponent<CharacterStats>();
+                    BossStats ChStats = BossManager.Instance.GetComponent<BossStats>();
                     characterCombat.Attack(ChStats);
                 }
-            }
+            
         }
-        if (enemyController != null)
+        else if (enemyController != null)
         {
             agent.speed = 5f;
             Transform enemy = enemyController.transform;

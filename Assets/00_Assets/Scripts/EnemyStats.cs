@@ -14,8 +14,8 @@ public class EnemyStats : CharacterStats
         gameObject.GetComponent<EnemyController>().enabled = false;
         gameObject.GetComponent<Enemy>().enabled = false;
         gameObject.GetComponent<EnemyStats>().enabled = false;
-        gameObject.GetComponent<FriendController>().enabled = true;
-        gameObject.GetComponent<FriendStats>().enabled = true;
+        gameObject.AddComponent<FriendController>().enabled = true;
+        gameObject.AddComponent<FriendStats>().enabled = true;
         FriendManager.Instance.UpdateFriends();
         gameObject.name = ("Friend");
         Debug.Log("Soy gay");

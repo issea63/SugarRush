@@ -1,15 +1,21 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FriendStats : CharacterStats
 {
     public Transform objectSpawnPos;
     public GameObject objectSpawn;
     public GameObject canvas;
-
+    
     public bool aimargay = false;
     private void Start()
     {
-        gameObject.GetComponent<FriendStats>().SetHealth(100);
+        currentHealth = maxHealth;
+        animator = GetComponentInChildren<Animator>();
+        healthBar = gameObject.GetComponentInChildren<HealthBarEnemyFinder>().GetComponent<Image>();
+        canvas = GetComponentInChildren<BillboardCanvas>().gameObject;
+        healthBar.fillAmount = 1;
         canvas.SetActive(false);
     }
     public override void Die()

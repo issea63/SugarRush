@@ -21,6 +21,8 @@ public class PowersManager : MonoBehaviour
     float attackCooldown = 15f;
     bool dashActive = false;
     public bool powerUp1;
+    bool power1;
+    bool power2;
     public bool powerUp2;
     public bool powerUp3;
     public bool powerUp4;
@@ -30,7 +32,7 @@ public class PowersManager : MonoBehaviour
     Animator animator;
     public LayerMask interactLayer;
     PlayerMotor motor;
-
+    
     #region Singleton
     public static PowersManager Instance;
 
@@ -72,10 +74,12 @@ public class PowersManager : MonoBehaviour
 
             Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
             RaycastHit raycastHit;
-            if(Physics.Raycast(ray, out raycastHit, 100, interactLayer))
+            if (Physics.Raycast(ray, out raycastHit, 100, interactLayer))
             {
+                power1 = false;
                 StartCoroutine("ShootRoutine", raycastHit);
             }
+            else return;
         }
         else return;
     }
@@ -89,10 +93,13 @@ public class PowersManager : MonoBehaviour
         {
             yield return null;
         }
-
-        Instantiate(bullet, bulletOrigin.position, bulletOrigin.rotation);
-        mana -= 5;
-        shotCooldown = 1f;
+        if (!power1)
+        {
+            Instantiate(bullet, bulletOrigin.position, bulletOrigin.rotation);
+            mana -= 5;
+            shotCooldown = 1f;
+            power1 = true;
+        }
     }
 
     public void OnMultiShot()
@@ -104,6 +111,7 @@ public class PowersManager : MonoBehaviour
 
             if (Physics.Raycast(ray, out RaycastHit hit, 100f, interactLayer))
             {
+                power2 = false;
                 StartCoroutine("MultiShotRoutine",hit );
             }
         }
@@ -119,11 +127,16 @@ public class PowersManager : MonoBehaviour
         {
             yield return null;
         }        
+
+        if(!power2)
+        {
             foreach (Transform origin in originsMultiple)
             {
                 Instantiate(bullet, origin.position, origin.rotation);
                 mana -= 5f;
+                power2 = true;
             }
+        }
 
             multiShotCooldown = 5f;
     }
@@ -158,11 +171,11 @@ public class PowersManager : MonoBehaviour
         {
             if (Physics.Raycast(ray, out raycastHit, 100, interactLayer))
             {
-                EnemyStats targetStats = raycastHit.collider.GetComponent<EnemyStats>();
+                CharacterStats targetStats = raycastHit.collider.GetComponent<CharacterStats>();
 
-                if (targetStats == null) return;
+                if (targetStats == null || raycastHit.collider.GetComponent<FriendStats>() ) return;
                 motor.moveOn = true;
-                motor.FollowTarget(raycastHit.collider.GetComponent<Enemy>());
+                motor.FollowTarget(raycastHit.collider.GetComponent<Interactable>());
                 motor.MoveToPoint(targetStats.transform.position);
                 StartCoroutine(AttackRoutine(targetStats));
 

@@ -19,9 +19,12 @@ public class BulletLogic : MonoBehaviour
     {
         if(other.CompareTag("Enemy"))
         {
-            other.GetComponent<EnemyStats>().SetHealth(-10);
-            other.GetComponent<Enemy>().enemycanvas.SetActive(true);
-            other.GetComponent<EnemyController>().lookRadius = 10000000f;
+            other.GetComponent<CharacterStats>().SetHealth(-10);
+            if(other.GetComponent<Enemy>() != null)
+            {
+                other.GetComponent<Enemy>().enemycanvas.SetActive(true);
+                other.GetComponent<EnemyController>().lookRadius = 10000000f;
+            }
         }
     }
 }

@@ -72,5 +72,13 @@ public class PlayerController : MonoBehaviour
         {
             FriendManager.Instance.LoadScene("ScenePrueba2");
         }
+        if(other.CompareTag("BossAttack"))
+        {
+            gameObject.GetComponent<PlayerStats>().SetHealth(-10);
+        }
+        if(other.CompareTag("LaserBeam"))
+        {
+            gameObject.GetComponent<PlayerStats>().SetHealth(-30);
+        }
     }
 }

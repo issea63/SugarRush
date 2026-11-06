@@ -277,9 +277,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7087431620574248904, guid: 638ce08c782c2a7438e6880786259178, type: 3}
+      propertyPath: damage.baseValue
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 7200807197562613312, guid: 638ce08c782c2a7438e6880786259178, type: 3}
       propertyPath: m_Name
       value: Friend
+      objectReference: {fileID: 0}
+    - target: {fileID: 7369129109739198810, guid: 638ce08c782c2a7438e6880786259178, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1203,14 +1211,14 @@ PrefabInstance:
     - target: {fileID: 60274412336844755, guid: 35736c3991b2b5c4283cbc6f000b5996, type: 3}
       propertyPath: inventoryUI
       value: 
-      objectReference: {fileID: 1598758966}
+      objectReference: {fileID: 0}
     - target: {fileID: 1967953093075664418, guid: 35736c3991b2b5c4283cbc6f000b5996, type: 3}
       propertyPath: menuUI
       value: 
       objectReference: {fileID: 1030334188}
     - target: {fileID: 5644954735965942213, guid: 35736c3991b2b5c4283cbc6f000b5996, type: 3}
       propertyPath: m_Name
-      value: GameObject
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5680821862853306083, guid: 35736c3991b2b5c4283cbc6f000b5996, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1830,6 +1838,7 @@ GameObject:
   - component: {fileID: 1545542393}
   - component: {fileID: 1545542395}
   - component: {fileID: 1545542394}
+  - component: {fileID: 1545542396}
   m_Layer: 7
   m_Name: Boss
   m_TagString: Enemy
@@ -1942,7 +1951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e11a628649fc845848f733d78a86f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossManager
-  boss: {fileID: 1545542388}
+  boss: {fileID: 2060153720}
 --- !u!114 &1545542394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1956,13 +1965,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossStats
   maxHealth: 100
+  currentHealth: 0
   armor:
     baseValue: 0
   damage:
     baseValue: 0
   healthBar: {fileID: 1202408532}
   animator: {fileID: 0}
-  secondPhase: 0
+  secondPhase: 1
 --- !u!114 &1545542395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1979,11 +1989,28 @@ MonoBehaviour:
   radius: 4
   player: {fileID: 827640402}
   amIFocused: 0
---- !u!1 &1598758966 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3587995159272121365, guid: 86d04da2b25e3f94fbb422967f0a3e77, type: 3}
-  m_PrefabInstance: {fileID: 594624736}
+--- !u!114 &1545542396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545542388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b0c7b1128e48042a94872c178d1d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossCombat
+  animator: {fileID: 0}
+  attackCooldown: 10
+  animation1: 2
+  animation2: 2
+  attackDuration: 3
+  attackDuration2: 3
+  attackRange: 2
+  beamDanger: {fileID: 6441873369525384307, guid: 0f3d407feb92ebb49b98d0157de5008a, type: 3}
+  beamAttack: {fileID: 8046991507176573988, guid: 73298561440e8a947a82f9ef0f2bd04d, type: 3}
+  collidersAttack1: []
 --- !u!1 &1673268662
 GameObject:
   m_ObjectHideFlags: 0

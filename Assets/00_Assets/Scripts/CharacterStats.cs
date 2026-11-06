@@ -8,7 +8,7 @@ public class CharacterStats : MonoBehaviour
 {
     [Header("Stats")]
     public int maxHealth = 100;
-    public int currentHealth {get; private set;}
+    public int currentHealth;
     public Stats armor;
     public Stats damage;
 

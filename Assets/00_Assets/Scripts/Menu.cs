@@ -3,10 +3,30 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    #region Singleton
+
+    public static Menu Instance;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+    }
+
+    #endregion
     public GameObject menuUI;
 
     private void Start()
     {
+        menuUI = GameObject.FindWithTag("MenuUI").GetComponentInChildren<MenuSon>().gameObject;
         Time.timeScale = 1f;
         if (menuUI != null)
         {
