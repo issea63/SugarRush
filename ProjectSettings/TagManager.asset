@@ -19,6 +19,13 @@ TagManager:
   - Shoulders
   - LaserBeam
   - BossAttack
+  - PlayerBar
+  - Mana
+  - Image1
+  - Image2
+  - Image3
+  - Image4
+  - Image5
   layers:
   - Default
   - TransparentFX

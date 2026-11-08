@@ -198,7 +198,26 @@ MonoBehaviour:
       - rid: 4653304856556339516
       - rid: 4653304856556339517
     m_RuntimeSettings:
-      m_List: []
+      m_List:
+      - rid: 4653304856556339483
+      - rid: 4653304856556339485
+      - rid: 4653304856556339489
+      - rid: 4653304856556339490
+      - rid: 4653304856556339491
+      - rid: 4653304856556339492
+      - rid: 4653304856556339493
+      - rid: 4653304856556339495
+      - rid: 4653304856556339496
+      - rid: 4653304856556339500
+      - rid: 4653304856556339501
+      - rid: 4653304856556339502
+      - rid: 4653304856556339504
+      - rid: 4653304856556339505
+      - rid: 4653304856556339506
+      - rid: 4653304856556339511
+      - rid: 4653304856556339512
+      - rid: 4653304856556339513
+      - rid: 4653304856556339514
   renderingLayerNames:
   - Default
   lightLayerName0: 
@@ -272,7 +291,7 @@ MonoBehaviour:
       type: {class: LookDevVolumeProfileSettings, ns: UnityEngine.Rendering.HighDefinition, asm: Unity.RenderPipelines.HighDefinition.Runtime}
       data:
         m_Version: 0
-        m_VolumeProfile: {fileID: 0}
+        m_VolumeProfile: {fileID: 11400000, guid: ab09877e2e707104187f6f83e2f62510, type: 2}
     - rid: 4653304856556339485
       type: {class: HDRenderPipelineRuntimeShaders, ns: UnityEngine.Rendering.HighDefinition, asm: Unity.RenderPipelines.HighDefinition.Runtime}
       data:

@@ -42,6 +42,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8225569226068512667}
     m_Modifications:
+    - target: {fileID: 287828826130217474, guid: 5871517448cb67c41932a75bd7798564, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0672f233c03581b448bc06073737e96e, type: 2}
+    - target: {fileID: 1097108074956640232, guid: 5871517448cb67c41932a75bd7798564, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0672f233c03581b448bc06073737e96e, type: 2}
     - target: {fileID: 1577148773439125537, guid: 5871517448cb67c41932a75bd7798564, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -82,6 +90,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4503859060651355038, guid: 5871517448cb67c41932a75bd7798564, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0672f233c03581b448bc06073737e96e, type: 2}
     - target: {fileID: 6691517014890465947, guid: 5871517448cb67c41932a75bd7798564, type: 3}
       propertyPath: m_Name
       value: CableBlue (2)
@@ -144,6 +156,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7635826562936255635, guid: 2c11c2c089f5f274eaff25645d20714c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0672f233c03581b448bc06073737e96e, type: 2}
     - target: {fileID: 919132149155446097, guid: 2c11c2c089f5f274eaff25645d20714c, type: 3}
       propertyPath: m_Name
       value: CablePlataforma
@@ -166,6 +182,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8225569226068512667}
     m_Modifications:
+    - target: {fileID: 3246222409603153643, guid: 3c1a1bbaa5187ac4dbfd2c81fae38af7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0672f233c03581b448bc06073737e96e, type: 2}
     - target: {fileID: 4242599237341225058, guid: 3c1a1bbaa5187ac4dbfd2c81fae38af7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.3
@@ -206,10 +226,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5321724296940781751, guid: 3c1a1bbaa5187ac4dbfd2c81fae38af7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0672f233c03581b448bc06073737e96e, type: 2}
     - target: {fileID: 7506969742750764114, guid: 3c1a1bbaa5187ac4dbfd2c81fae38af7, type: 3}
       propertyPath: m_Name
       value: CableYellow (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8617119561552844830, guid: 3c1a1bbaa5187ac4dbfd2c81fae38af7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0672f233c03581b448bc06073737e96e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

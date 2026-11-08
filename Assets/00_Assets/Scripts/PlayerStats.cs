@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerStats : CharacterStats
 {
@@ -8,6 +9,7 @@ public class PlayerStats : CharacterStats
     public TextMeshProUGUI armorText;
     private void Awake()
     {
+        healthBar = GameObject.FindWithTag("PlayerBar").GetComponent<Image>();
         currentHealth = maxHealth;
         damageText = GameObject.FindWithTag("Damage").GetComponent<TextMeshProUGUI>();
         armorText = GameObject.FindWithTag("Armor").GetComponent<TextMeshProUGUI>();

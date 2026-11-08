@@ -15,5 +15,5 @@ MonoBehaviour:
   coinNumber: {fileID: 0}
   coinAmount: 0
   itemName: ManaPotion
-  icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  icon: {fileID: 21300000, guid: cfd3bb9629988c4459cca26618d61646, type: 3}
   canShowInInventory: 1

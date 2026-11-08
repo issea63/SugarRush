@@ -6,6 +6,7 @@ public class Enemy : Interactable
     public GameObject enemycanvas;
     private void Start()
     {
+        player = PlayerManager.Instance.player.transform;
         stats = GetComponent<CharacterStats>();
         enemycanvas.SetActive(false);
     }

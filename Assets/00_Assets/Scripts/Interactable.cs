@@ -7,6 +7,10 @@ public class Interactable : MonoBehaviour
     public Transform player;
     public bool amIFocused = false;
 
+    private void Start()
+    {
+        player = PlayerManager.Instance.player.transform;
+    }
     private void Update()
     {
         if(amIFocused)

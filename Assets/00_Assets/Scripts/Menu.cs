@@ -26,7 +26,7 @@ public class Menu : MonoBehaviour
 
     private void Start()
     {
-        menuUI = GameObject.FindWithTag("MenuUI").GetComponentInChildren<MenuSon>().gameObject;
+        menuUI = GameObject.FindWithTag("MenuUI");
         Time.timeScale = 1f;
         if (menuUI != null)
         {

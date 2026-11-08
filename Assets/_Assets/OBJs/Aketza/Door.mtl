@@ -1,0 +1,13 @@
+# Blender 5.2.1 LTS MTL File: 'Intranet-2_EXP.blend'
+# www.blender.org
+
+newmtl Trim
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/LOW_Trim_DefaultMaterial_BaseMap.tga
+map_Bump -bm 1.000000 C:/LOW_Trim_DefaultMaterial_Normal.tga

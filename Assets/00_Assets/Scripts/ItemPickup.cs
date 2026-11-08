@@ -6,6 +6,7 @@ public class ItemPickup : Interactable
     public Item item;
     private void Start()
     {
+        player = PlayerManager.Instance.player.transform;
         if (item.itemName == "BagCoins")
         {
             item.coinAmount = 0;

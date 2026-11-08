@@ -18,5 +18,5 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: cfd3bb9629988c4459cca26618d61646, type: 3}
   canShowInInventory: 1
   damageMod: 0
-  armorMod: -10
+  armorMod: -5
   slot: 0

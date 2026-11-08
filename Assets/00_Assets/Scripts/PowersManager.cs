@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PowersManager : MonoBehaviour
 {
@@ -27,11 +28,17 @@ public class PowersManager : MonoBehaviour
     public bool powerUp3;
     public bool powerUp4;
     public bool powerUp5;
+    public Image image1;
+    public Image image2;
+    public Image image3;
+    public Image image4;
+    public Image image5;
     [Header ("Others")]
     CharacterStats stats;
-    Animator animator;
+    public Animator animator;
     public LayerMask interactLayer;
     PlayerMotor motor;
+    public Image manaBottle;
     
     #region Singleton
     public static PowersManager Instance;
@@ -43,6 +50,8 @@ public class PowersManager : MonoBehaviour
     #endregion
     private void Start()
     {
+
+        //manaBottle = GameObject.FindWithTag("Mana").GetComponent<Image>();
         motor = GetComponent<PlayerMotor>();
         stats = GetComponent<CharacterStats>();
         animator = GetComponentInChildren<Animator>();
@@ -63,6 +72,7 @@ public class PowersManager : MonoBehaviour
         if (dashActive) { dashDuration -= Time.deltaTime; } 
         if (dashDuration <= 0) { dashActive = false; gameObject.GetComponent<NavMeshAgent>().speed = 3.5f; dashDuration = 2f; }
         if (attackCooldown >= 0) { attackCooldown -= Time.deltaTime; } else { attackCooldown = 0; }
+        //ManaUpdate();
     }
 
     public void OnShoot()
@@ -85,7 +95,7 @@ public class PowersManager : MonoBehaviour
     }
     public IEnumerator ShootRoutine(RaycastHit ray)
     {
-        //animator etc.
+        animator.SetTrigger("Spell");
         motor.target = ray.collider.transform;
         motor.rotationCorrect = false;
 
@@ -119,7 +129,7 @@ public class PowersManager : MonoBehaviour
     }
     public IEnumerator MultiShotRoutine(RaycastHit ray)
     {
-        //animator etc
+        animator.SetTrigger("Spell");
         motor.target = ray.collider.transform;
 
         motor.rotationCorrect =false;
@@ -144,6 +154,7 @@ public class PowersManager : MonoBehaviour
     {
         if (healCooldown <= 0 && mana >= 50 && powerUp3)
         {
+            animator.SetTrigger("Heal");
             gameObject.GetComponent<PlayerStats>().SetHealth(30);
             healCooldown = 20f;
             mana -= 50;
@@ -199,6 +210,10 @@ public class PowersManager : MonoBehaviour
             yield return new WaitForSeconds(.8f);
             targetStats.SetHealth(stats.damage.GetValue() * 2);
         }
+    }
+    public void ManaUpdate()
+    {
+        manaBottle.fillAmount = mana / 100f;
     }
 
 

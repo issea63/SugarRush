@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
             RemoveFocus();
         }
     }
-    void OnInteract()
+    public void OnInteract()
     {
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
         RaycastHit raycastHit;
