@@ -6,6 +6,7 @@ public class Boss : Interactable
 
     private void Start()
     {
+        player = PlayerManager.Instance.player.transform;
         stats = GetComponent<CharacterStats>();
     }
 

@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -32,6 +33,17 @@ public class PlayerStats : CharacterStats
         UpdateText();
         EquipmentManager.Instance.onEquipmentChangedCallback += OnEquipmentChanged;
     }
+    private void Update()
+    {
+        if(damageText = null)
+        {
+            damageText = GameObject.FindWithTag("Damage").GetComponent<TextMeshProUGUI>();
+        }
+        if (armorText = null)
+        {
+            armorText = GameObject.FindWithTag("Armor").GetComponent<TextMeshProUGUI>();
+        }
+    }
 
     void OnEquipmentChanged(Equipment newEquipment, Equipment oldEquipment)
     {
@@ -48,8 +60,14 @@ public class PlayerStats : CharacterStats
     public override void Die()
     {
         base.Die();
-
-        SceneManager.LoadScene("LoseScene");
+        StartCoroutine("DieRoutinePlayer");
+    }
+    public IEnumerator DieRoutinePlayer()
+    {
+        PlayerManager.Instance.GetComponent<PlayerController>().enabled = false;
+        animator.SetTrigger("Die");
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("MainMenu");
     }
 
     private void UpdateText()

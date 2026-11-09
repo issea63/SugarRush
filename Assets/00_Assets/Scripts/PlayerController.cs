@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -6,13 +7,20 @@ using UnityEngine.TextCore.Text;
 
 public class PlayerController : MonoBehaviour
 {
+    BossManager bossManager;
     public bool focused = false;
     public Interactable focus;
     public LayerMask groundLayer, interactLayer;
     PlayerMotor motor;
+    public GameObject door;
+    public CinemachineCamera cam;
     private void Awake()
     {
         motor = GetComponent<PlayerMotor>();
+    }
+    private void Start()
+    {
+        bossManager = BossManager.Instance;
     }
     public void OnMove()
     {
@@ -70,7 +78,7 @@ public class PlayerController : MonoBehaviour
     {
         if(other.CompareTag("Portal"))
         {
-            FriendManager.Instance.LoadScene("ScenePrueba2");
+            FriendManager.Instance.LoadScene("EscenaAketza");
         }
         if(other.CompareTag("BossAttack"))
         {
@@ -79,6 +87,20 @@ public class PlayerController : MonoBehaviour
         if(other.CompareTag("LaserBeam"))
         {
             gameObject.GetComponent<PlayerStats>().SetHealth(-30);
+        }
+        if(other.CompareTag("BossTrigger"))
+        {
+            bossManager.enabled = true;
+            if(cam != null)
+            {
+                cam.Priority = 2;
+            }
+            if(door != null) door.SetActive(true);
+            foreach (FriendController friendController in FriendManager.Instance.controllers)
+            {
+                friendController.transform.localPosition = PlayerManager.Instance.player.transform.localPosition;
+            }
+
         }
     }
 }

@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00_Assets/EszenaLaia/Laia.unity
     guid: 67e2568bebd426c499bdc16ac2de4923
+  - enabled: 1
+    path: Assets/_Assets/Scenes/EscenaAketza.unity
+    guid: 3e87e5dcbb2e88844accd94b4c1e159b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

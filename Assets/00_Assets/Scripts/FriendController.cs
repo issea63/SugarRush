@@ -37,8 +37,11 @@ public class FriendController : MonoBehaviour
         float distance = Vector3.Distance(target.position, transform.position);
         if(BossManager.Instance != null)
         {
-            Transform bossTrans = BossManager.Instance.boss.transform;
-            
+            BossManager boss = BossManager.Instance;
+            if(boss.enabled)
+            {
+                Transform bossTrans = BossManager.Instance.boss.transform;
+
                 agent.speed = 5f;
                 agent.SetDestination(bossTrans.position);
 
@@ -47,7 +50,7 @@ public class FriendController : MonoBehaviour
                     BossStats ChStats = BossManager.Instance.GetComponent<BossStats>();
                     characterCombat.Attack(ChStats);
                 }
-            
+            }            
         }
         else if (enemyController != null)
         {
