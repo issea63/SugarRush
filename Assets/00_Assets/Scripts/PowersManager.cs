@@ -50,14 +50,19 @@ public class PowersManager : MonoBehaviour
     #endregion
     private void Start()
     {
-
-        //manaBottle = GameObject.FindWithTag("Mana").GetComponent<Image>();
+        image1 = GameObject.FindWithTag("Image1").GetComponent<Image>();
+        image2 = GameObject.FindWithTag("Image2").GetComponent<Image>();
+        image3 = GameObject.FindWithTag("Image3").GetComponent<Image>();
+        image4 = GameObject.FindWithTag("Image4").GetComponent<Image>();
+        image5 = GameObject.FindWithTag("Image5").GetComponent<Image>();
+        manaBottle = GameObject.FindWithTag("Mana").GetComponent<Image>();
         motor = GetComponent<PlayerMotor>();
         stats = GetComponent<CharacterStats>();
         animator = GetComponentInChildren<Animator>();
         multiShotCooldown = 0;
         shotCooldown = 0;
         healCooldown = 0;
+        dashCooldown = 0;
         attackCooldown = 0;
         mana = 100f;
     }
@@ -65,14 +70,14 @@ public class PowersManager : MonoBehaviour
     {
         if (mana >= 100) { mana = 100; }
         if (mana <= 100) { mana += Time.deltaTime; }
-        if (shotCooldown >= 0) { shotCooldown -= Time.deltaTime; } else { shotCooldown = 0; }
-        if (multiShotCooldown >= 0) { multiShotCooldown -= Time.deltaTime; } else { multiShotCooldown = 0; }
-        if (healCooldown >= 0) { healCooldown -= Time.deltaTime; } else { healCooldown = 0; }
-        if (dashCooldown >= 0) { dashCooldown -= Time.deltaTime; } else { dashCooldown = 0; }
+        if (shotCooldown >= 0) { shotCooldown -= Time.deltaTime; image1.fillAmount = shotCooldown / 1; } else { shotCooldown = 0; }
+        if (multiShotCooldown >= 0) { multiShotCooldown -= Time.deltaTime; image2.fillAmount = multiShotCooldown / 5f; } else { multiShotCooldown = 0; }
+        if (healCooldown >= 0) { healCooldown -= Time.deltaTime; image5.fillAmount = healCooldown / 20; } else { healCooldown = 0; }
+        if (dashCooldown >= 0) { dashCooldown -= Time.deltaTime; image3.fillAmount = dashCooldown / 2; } else { dashCooldown = 0; }
         if (dashActive) { dashDuration -= Time.deltaTime; } 
         if (dashDuration <= 0) { dashActive = false; gameObject.GetComponent<NavMeshAgent>().speed = 3.5f; dashDuration = 2f; }
-        if (attackCooldown >= 0) { attackCooldown -= Time.deltaTime; } else { attackCooldown = 0; }
-        //ManaUpdate();
+        if (attackCooldown >= 0) { attackCooldown -= Time.deltaTime; image4.fillAmount = attackCooldown / 15; } else { attackCooldown = 0; }
+        ManaUpdate();
     }
 
     public void OnShoot()

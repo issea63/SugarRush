@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossStats : CharacterStats
 {
@@ -8,6 +9,8 @@ public class BossStats : CharacterStats
 
     private void Start()
     {
+        healthBar = GameObject.FindWithTag("BossBar").GetComponent<Image>();
+        healthBar.enabled = true;
         maxHealth = 350;
         currentHealth = maxHealth;
     }

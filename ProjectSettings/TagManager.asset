@@ -26,6 +26,8 @@ TagManager:
   - Image3
   - Image4
   - Image5
+  - BossTrigger
+  - BossBar
   layers:
   - Default
   - TransparentFX

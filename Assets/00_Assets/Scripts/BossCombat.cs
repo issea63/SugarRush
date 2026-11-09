@@ -18,7 +18,7 @@ public class BossCombat : MonoBehaviour
     private void Start()
     {
         attackCooldown = 5f;
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
     }
     private void Update()
     {
@@ -36,8 +36,8 @@ public class BossCombat : MonoBehaviour
         switch (attackRange)
         {
             case 1:
-                //animator.SetBool("SetIdle", false);
-                //animator.SetTrigger("Attack1");
+                animator.SetBool("SetIdle", false);
+                animator.SetTrigger("Attack1");
                 yield return new WaitForSeconds(animation1);
                 foreach (GameObject collider in collidersAttack1)
                 {
@@ -48,16 +48,14 @@ public class BossCombat : MonoBehaviour
                 {
                     collider.SetActive(false);
                 }
-                //animator.SetBool("SetIdle", true);
-                //animator.SetBool("SetIdle", true);
+                animator.SetBool("SetIdle", true);
                 break;
             case 2:
                 if(BossManager.Instance.gameObject.GetComponent<BossStats>().secondPhase)
                 {
                     Debug.Log("attack2");
-                    //animator.SetBool("SetIdle", false);
-                    //animator.SetTrigger("Attack2Start");
-                    //animator.SetBool("Attack2Idle", true);
+                    animator.SetBool("SetIdle", false);
+                    animator.SetTrigger("Attack2");
                     yield return new WaitForSeconds(animation2);
                     Instantiate(beamDanger, PlayerManager.Instance.gameObject.transform.position, Quaternion.identity);
                     yield return new WaitForSeconds(1.5f);
@@ -72,13 +70,13 @@ public class BossCombat : MonoBehaviour
                     Vector3 spawnPosition2 = danger2.position + Vector3.up * 10f;
                     Instantiate(beamAttack, spawnPosition2, beamAttack.transform.localRotation);
                     Destroy(GameObject.Find("BeamDanger(Clone)"));
-                    //animator.SetBool("Attack2Idle", false);
-                    //animator.SetBool("SetIdle", true);
+                    animator.SetTrigger("Attack2");
+                    animator.SetBool("SetIdle", true);
                 }
                 else
                 {
-                    //animator.SetBool("SetIdle", false);
-                    //animator.SetTrigger("Attack1");
+                    animator.SetBool("SetIdle", false);
+                    animator.SetTrigger("Attack1");
                     yield return new WaitForSeconds(animation1);
                     foreach (GameObject collider in collidersAttack1)
                     {
@@ -89,8 +87,8 @@ public class BossCombat : MonoBehaviour
                     {
                         collider.SetActive(false);
                     }
-                    //animator.SetBool("SetIdle", true);
-                    //animator.SetBool("SetIdle", true);
+                    animator.SetBool("SetIdle", true);
+                    animator.SetBool("SetIdle", true);
                 }
                 break;
         }

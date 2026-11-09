@@ -24,6 +24,7 @@ public class BulletLogic : MonoBehaviour
             {
                 other.GetComponent<Enemy>().enemycanvas.SetActive(true);
                 other.GetComponent<EnemyController>().lookRadius = 10000000f;
+                Destroy(gameObject);
             }
         }
     }

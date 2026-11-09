@@ -11,7 +11,6 @@ public class EnemyStats : CharacterStats
     {
         base.Die();
         //Instantiate(objectSpawn,objectSpawnPos.position, Quaternion.identity);
-        gameObject.GetComponent<EnemyController>().enabled = false;
         gameObject.GetComponent<Enemy>().enabled = false;
         gameObject.GetComponent<EnemyStats>().enabled = false;
         gameObject.AddComponent<FriendController>().enabled = true;

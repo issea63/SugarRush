@@ -32,7 +32,7 @@ public class CharacterStats : MonoBehaviour
     }
     public virtual void Die()
     {
-        StartCoroutine("DieRoutine");
+        //StartCoroutine("DieRoutine");
     }
     public void UpdateHealthUI()
     {
