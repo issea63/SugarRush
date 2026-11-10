@@ -20,5 +20,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Assets/Scenes/EscenaAketza.unity
     guid: 3e87e5dcbb2e88844accd94b4c1e159b
+  - enabled: 1
+    path: Assets/00_Assets/Scenes/LoseScene.unity
+    guid: 3203f1a9de3b4104dac2418903600f0d
+  - enabled: 1
+    path: Assets/00_Assets/Scenes/Win.unity
+    guid: e1cf7e24ca6bac74bbf7b6ceb9dcc1ef
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

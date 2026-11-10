@@ -6,14 +6,14 @@ using UnityEngine.UI;
 
 public class PlayerStats : CharacterStats
 {
-    public TextMeshProUGUI damageText;
-    public TextMeshProUGUI armorText;
+     public TextMeshProUGUI damageText;
+     public TextMeshProUGUI armorText;
     private void Awake()
     {
-        healthBar = GameObject.FindWithTag("PlayerBar").GetComponent<Image>();
+        healthBar = GameObject.FindGameObjectWithTag("PlayerBar").GetComponent<Image>();
+        damageText = GameObject.FindGameObjectWithTag("Damage").GetComponent<TextMeshProUGUI>();
+        armorText = GameObject.FindGameObjectWithTag("Armor").GetComponent<TextMeshProUGUI>();
         currentHealth = maxHealth;
-        damageText = GameObject.FindWithTag("Damage").GetComponent<TextMeshProUGUI>();
-        armorText = GameObject.FindWithTag("Armor").GetComponent<TextMeshProUGUI>();
     }
     private void Start()
     {
@@ -35,11 +35,11 @@ public class PlayerStats : CharacterStats
     }
     private void Update()
     {
-        if(damageText = null)
+        if(damageText == null)
         {
             damageText = GameObject.FindWithTag("Damage").GetComponent<TextMeshProUGUI>();
         }
-        if (armorText = null)
+        if (armorText == null)
         {
             armorText = GameObject.FindWithTag("Armor").GetComponent<TextMeshProUGUI>();
         }
@@ -67,7 +67,7 @@ public class PlayerStats : CharacterStats
         PlayerManager.Instance.GetComponent<PlayerController>().enabled = false;
         animator.SetTrigger("Die");
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("LoseScene");
     }
 
     private void UpdateText()

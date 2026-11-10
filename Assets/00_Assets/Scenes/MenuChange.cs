@@ -6,6 +6,12 @@ public class MenuChange : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
+
+    public void ExitGame()
+    { 
+        Application.Quit();
+    }
+
     private void Start()
     {
         if(FriendManager.Instance != null)

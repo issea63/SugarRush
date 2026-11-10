@@ -160,11 +160,6 @@ ModelImporter:
       position: {x: 5.3751135e-12, y: 0.0019519712, z: -3.4698928e-11}
       rotation: {x: 0.16892135, y: -0.0005681468, z: -0.002856547, w: 0.98562527}
       scale: {x: 0.99999976, y: 0.99999964, z: 1.0000001}
-    - name: DEF-spine.006_end
-      parentName: DEF-spine.006
-      position: {x: -0, y: 0.00061256107, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
     - name: MCH-torso.parent
       parentName: rig
       position: {x: 0.0000142075305, y: 0.000477535, z: 0.0014215815}
@@ -215,11 +210,6 @@ ModelImporter:
       position: {x: 6.402843e-11, y: -5.5297277e-11, z: 8.731149e-11}
       rotation: {x: -0.0000000372529, y: -0.000000059604638, z: -0.00000012665986, w: 1}
       scale: {x: 1.0000011, y: 1.0000001, z: 1.0000011}
-    - name: DEF-pelvis.L_end
-      parentName: DEF-pelvis.L
-      position: {x: -0, y: 0.0003481262, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
     - name: ORG-pelvis.R
       parentName: ORG-spine
       position: {x: 5.1363356e-14, y: -5.589712e-11, z: -7.790906e-11}
@@ -230,11 +220,6 @@ ModelImporter:
       position: {x: -5.820766e-11, y: -5.5297277e-11, z: -7.334165e-11}
       rotation: {x: 0.000000081956394, y: -0.000000029802326, z: 0.000000022351744, w: 1}
       scale: {x: 0.9999998, y: 0.9999999, z: 0.9999997}
-    - name: DEF-pelvis.R_end
-      parentName: DEF-pelvis.R
-      position: {x: -0, y: 0.0003481262, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
     - name: DEF-thigh.L
       parentName: ORG-spine
       position: {x: -0.00016454457, y: 0.00011890615, z: 0.00004355773}
@@ -265,11 +250,6 @@ ModelImporter:
       position: {x: -6.11908e-11, y: 0.0010662411, z: 3.6743584e-11}
       rotation: {x: 0.00013307107, y: 0.9565932, z: -0.29142618, w: 0.00043602276}
       scale: {x: 1.0000008, y: 1.0000008, z: 1.0000032}
-    - name: DEF-toe.L_end
-      parentName: DEF-toe.L
-      position: {x: -0, y: 0.00089849054, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
     - name: DEF-thigh.R
       parentName: ORG-spine
       position: {x: 0.0001645446, y: 0.00011890615, z: 0.000043557655}
@@ -300,11 +280,6 @@ ModelImporter:
       position: {x: -1.1475549e-11, y: 0.0010662413, z: -2.5538611e-11}
       rotation: {x: 0.00003536976, y: 0.9565934, z: -0.2914261, w: 0.00011583415}
       scale: {x: 1.0000011, y: 1.0000002, z: 1.0000051}
-    - name: DEF-toe.R_end
-      parentName: DEF-toe.R
-      position: {x: -0, y: 0.00089849037, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
     - name: MCH-spine.002
       parentName: torso
       position: {x: -0.0000142075305, y: -0.00047686338, z: 0.0011720469}
@@ -345,11 +320,6 @@ ModelImporter:
       position: {x: -2.4156179e-11, y: 3.2945535e-10, z: 1.4901161e-10}
       rotation: {x: 0.000000059604645, y: 0.000000029802322, z: 0.00000008940697, w: 1}
       scale: {x: 1.0000007, y: 1.0000008, z: 1.0000011}
-    - name: DEF-shoulder.L_end
-      parentName: DEF-shoulder.L
-      position: {x: -0, y: 0.002180528, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
     - name: DEF-upper_arm.L
       parentName: ORG-shoulder.L
       position: {x: 0.000008305907, y: 0.0022316547, z: -0.000022131011}
@@ -373,13 +343,8 @@ ModelImporter:
     - name: DEF-hand.L
       parentName: DEF-forearm.L.001
       position: {x: -9.313225e-11, y: 0.00016397367, z: -9.3132255e-12}
-      rotation: {x: 0.23183584, y: -0.43986502, z: -0.04736398, w: 0.86633}
+      rotation: {x: 0.41030574, y: -0.24230035, z: 0.44705063, w: 0.7570241}
       scale: {x: 1.0000024, y: 1.0000027, z: 0.99999815}
-    - name: DEF-hand.L_end
-      parentName: DEF-hand.L
-      position: {x: -0, y: 0.0014803263, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
     - name: ORG-shoulder.R
       parentName: ORG-spine.003
       position: {x: 0.00007774574, y: 0.000349094, z: 0.00013212519}
@@ -390,11 +355,6 @@ ModelImporter:
       position: {x: 2.1536835e-11, y: -1.2631061e-10, z: -7.8580344e-11}
       rotation: {x: -0.000000059604638, y: -0.000000029802319, z: -0.000000119209275, w: 1}
       scale: {x: 1.0000004, y: 1.0000011, z: 1.0000013}
-    - name: DEF-shoulder.R_end
-      parentName: DEF-shoulder.R
-      position: {x: -0, y: 0.002182199, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
     - name: DEF-upper_arm.R
       parentName: ORG-shoulder.R
       position: {x: -0.00000836112, y: 0.0022333923, z: -0.000021952243}
@@ -418,13 +378,8 @@ ModelImporter:
     - name: DEF-hand.R
       parentName: DEF-forearm.R.001
       position: {x: -4.6566128e-12, y: 0.00016397327, z: 1.2107193e-10}
-      rotation: {x: -0.21735251, y: -0.43416417, z: -0.050582264, w: -0.87275475}
+      rotation: {x: -0.4199768, y: -0.24305582, z: 0.43797812, w: -0.75678176}
       scale: {x: 1.0000029, y: 1.0000019, z: 0.9999974}
-    - name: DEF-hand.R_end
-      parentName: DEF-hand.R
-      position: {x: -0, y: 0.0014803263, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
     - name: ORG-breast.L
       parentName: ORG-spine.003
       position: {x: -0.001225611, y: -0.00051116804, z: -0.000083918}
@@ -435,11 +390,6 @@ ModelImporter:
       position: {x: 1.0396466e-12, y: -3.993769e-11, z: -1.1810816e-11}
       rotation: {x: 0.00000008972711, y: 0.000000007450581, z: 0.000000009313226, w: 1}
       scale: {x: 1.0000004, y: 1.0000004, z: 1.0000006}
-    - name: DEF-breast.L_end
-      parentName: DEF-breast.L
-      position: {x: -0, y: 0.0002337204, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
     - name: ORG-breast.R
       parentName: ORG-spine.003
       position: {x: 0.0011568754, y: -0.0006520328, z: -0.00008336828}
@@ -450,11 +400,6 @@ ModelImporter:
       position: {x: 2.3826477e-12, y: -3.6259638e-11, z: 2.210967e-11}
       rotation: {x: -0.0000001784647, y: 0.000000006519259, z: 0.000000015832486, w: 1}
       scale: {x: 1, y: 0.9999996, z: 0.99999964}
-    - name: DEF-breast.R_end
-      parentName: DEF-breast.R
-      position: {x: -0, y: 0.0002337204, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5

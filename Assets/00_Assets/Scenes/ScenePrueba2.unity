@@ -1277,7 +1277,7 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: f34bfb84725ae2c419f6dfa4ea2a3b2a, type: 2}
   m_BuildHeightMesh: 0
---- !u!1001 &521535044477464272
+--- !u!1001 &2145691050
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1287,15 +1287,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 124126037551983217, guid: c5c7ef8e4a1cec948bdcd2bbfdcd4921, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.9411283
+      value: 8.365905
       objectReference: {fileID: 0}
     - target: {fileID: 124126037551983217, guid: c5c7ef8e4a1cec948bdcd2bbfdcd4921, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.000000010489828
+      value: 0.00000012749456
       objectReference: {fileID: 0}
     - target: {fileID: 124126037551983217, guid: c5c7ef8e4a1cec948bdcd2bbfdcd4921, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.8267617
+      value: -3.630906
       objectReference: {fileID: 0}
     - target: {fileID: 124126037551983217, guid: c5c7ef8e4a1cec948bdcd2bbfdcd4921, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1327,22 +1327,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 789022006696341707, guid: c5c7ef8e4a1cec948bdcd2bbfdcd4921, type: 3}
       propertyPath: m_Name
-      value: pertsonaia_animazioak1
+      value: pertsonaia_animazioak1 (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4020635433943005598, guid: c5c7ef8e4a1cec948bdcd2bbfdcd4921, type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: d065997437c89e74eb6b531ee1302809, type: 3}
-    - target: {fileID: 4020635433943005598, guid: c5c7ef8e4a1cec948bdcd2bbfdcd4921, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 283a999d5635fa94886f494ab1420995, type: 2}
-    - target: {fileID: 6294017070524035083, guid: c5c7ef8e4a1cec948bdcd2bbfdcd4921, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 283a999d5635fa94886f494ab1420995, type: 2}
-    m_RemovedComponents:
-    - {fileID: 6294017070524035083, guid: c5c7ef8e4a1cec948bdcd2bbfdcd4921, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1420,5 +1407,5 @@ SceneRoots:
   - {fileID: 8098237146742992039}
   - {fileID: 1713173653}
   - {fileID: 1334639465}
-  - {fileID: 521535044477464272}
   - {fileID: 865604446}
+  - {fileID: 2145691050}
