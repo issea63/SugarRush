@@ -9,6 +9,9 @@ public class HealthManager : MonoBehaviour
 
     public Image healthBar;
 
+    public AnimationClip clip;
+    public Animator animator;
+
     private void Start()
     {
         currentHealth = maxHealth;
@@ -23,6 +26,7 @@ public class HealthManager : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        animator.SetTrigger("Hit");
         if (currentHealth <= 0)
         {
             Die();
@@ -40,6 +44,7 @@ public class HealthManager : MonoBehaviour
         Debug.Log(transform.name + " has died.");
         if(transform.name == "Player")
         {
+            animator.SetTrigger("Die");
             SceneManager.LoadScene("LoseScene");
         }
         // Add death logic here (e.g., play animation, disable character, etc.)
