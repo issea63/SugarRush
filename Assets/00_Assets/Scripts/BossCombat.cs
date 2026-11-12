@@ -19,13 +19,17 @@ public class BossCombat : MonoBehaviour
     {
         attackCooldown = 5f;
         //animator = GetComponent<Animator>();
+        foreach (GameObject collider in collidersAttack1)
+        {
+            collider.SetActive(false);
+        }
     }
     private void Update()
     {
         attackCooldown -= Time.deltaTime;
         if(attackCooldown <= 0)
         {
-            //attackRange = Random.Range(1, 3);
+            attackRange = Random.Range(1, 3);
             StartCoroutine("AttackRoutine");
             attackCooldown = 5;
         }

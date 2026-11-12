@@ -13,7 +13,7 @@ public class FriendStats : CharacterStats
     {
         currentHealth = maxHealth;
         animator = GetComponentInChildren<Animator>();
-        healthBar = gameObject.GetComponentInChildren<HealthBarEnemyFinder>().GetComponent<Image>();
+        healthBar = GetComponentInChildren<HealthBarEnemyFinder>().gameObject.GetComponent<Image>();
         canvas = GetComponentInChildren<BillboardCanvas>().gameObject;
         healthBar.fillAmount = 1;
         canvas.SetActive(false);

@@ -14,12 +14,18 @@ public class PlayerController : MonoBehaviour
     PlayerMotor motor;
     public GameObject door;
     public CinemachineCamera cam;
+    public GameObject bossTrigger;
+    public FriendController[] friends;
     private void Awake()
     {
         motor = GetComponent<PlayerMotor>();
     }
     private void Start()
     {
+        if(cam != null)
+        {
+            cam.Priority = 0;
+        }
         bossManager = BossManager.Instance;
     }
     public void OnMove()
@@ -90,16 +96,21 @@ public class PlayerController : MonoBehaviour
         }
         if(other.CompareTag("BossTrigger"))
         {
+            friends = FindObjectsByType<FriendController>();
             bossManager.enabled = true;
             if(cam != null)
             {
                 cam.Priority = 2;
             }
             if(door != null) door.SetActive(true);
-            foreach (FriendController friendController in FriendManager.Instance.controllers)
+            if(friends != null)
             {
-                friendController.transform.localPosition = PlayerManager.Instance.player.transform.localPosition;
+                foreach(var f in friends)
+                {
+                    f.transform.localPosition = PlayerManager.Instance.player.transform.localPosition;
+                }
             }
+            bossTrigger.SetActive(false);
 
         }
     }
