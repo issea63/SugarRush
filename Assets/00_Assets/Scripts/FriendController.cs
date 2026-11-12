@@ -1,14 +1,17 @@
+using Unity.AI.Navigation;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Rendering.HighDefinition;
 
 public class FriendController : MonoBehaviour
 {
+    public Transform navMesh;
     public float lookRadius = 10f;
+    public NavMeshSurface nav;
 
     Transform target;
     NavMeshAgent agent;
-    CharacterCombat characterCombat;
+    public CharacterCombat characterCombat;
     public EnemyController enemyController;
     public LayerMask friendLayer;
     [SerializeField] private float detectionRadius = 10f;
@@ -16,12 +19,25 @@ public class FriendController : MonoBehaviour
 
     private void Start()
     {
-
         enemyController = GetComponent<EnemyController>();
         Destroy(enemyController);
         if(BossManager.Instance != null)
         {
-            target = BossManager.Instance.boss.transform;
+            navMesh = GameObject.Find("NavObj").GetComponent<Transform>();
+            nav = GameObject.Find("NavObj").GetComponent<NavMeshSurface>();
+            BossManager boss = BossManager.Instance;
+            if(boss.enabled)
+            {
+                target = BossManager.Instance.boss.transform;
+            }
+            else
+            {
+                target = PlayerManager.Instance.player.transform;
+            }
+            if (navMesh != null)
+            {
+                transform.SetParent(navMesh);
+            }
         }
         else
         {
@@ -33,13 +49,14 @@ public class FriendController : MonoBehaviour
 
     private void Update()
     {
+        BossManager boss = BossManager.Instance;
         FindEnemy();
         float distance = Vector3.Distance(target.position, transform.position);
-        if(BossManager.Instance != null)
+        if (BossManager.Instance != null && boss.enabled)
         {
-            BossManager boss = BossManager.Instance;
-            if(boss.enabled)
+            if (boss.enabled)
             {
+                target = boss.transform;
                 Transform bossTrans = BossManager.Instance.boss.transform;
 
                 agent.speed = 5f;
@@ -48,9 +65,19 @@ public class FriendController : MonoBehaviour
                 if (distance <= agent.stoppingDistance)
                 {
                     BossStats ChStats = BossManager.Instance.GetComponent<BossStats>();
-                    characterCombat.Attack(ChStats);
+                    if (ChStats != null)
+                    {
+                        Debug.Log("AtaqueBoss");
+                        characterCombat.Attack(ChStats);
+                    }
                 }
-            }            
+            }
+            else
+            {
+                agent.speed = 2.5f;
+                agent.SetDestination(target.position);
+            }
+
         }
         else if (enemyController != null)
         {

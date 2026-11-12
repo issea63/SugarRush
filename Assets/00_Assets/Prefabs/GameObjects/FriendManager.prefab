@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96781e818b04c2840873f95dfdbbe94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FriendManager
-  friendPrefab: {fileID: 7200807197562613312, guid: 638ce08c782c2a7438e6880786259178, type: 3}
+  friendPrefab: {fileID: 5655625470738806109, guid: 6deb559ed9eab53499d20354af4bbc5b, type: 3}
   spawnPoint: {fileID: 0}
   controllers: []
   previousControllerCount: 0
