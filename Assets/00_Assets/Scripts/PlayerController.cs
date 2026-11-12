@@ -25,14 +25,14 @@ public class PlayerController : MonoBehaviour
         if(cam != null)
         {
             cam.Priority = 0;
+            bossManager = BossManager.Instance;
         }
-        bossManager = BossManager.Instance;
     }
     public void OnMove()
     {
         //Input.mousePosition
 
-        if(EventSystem.current.IsPointerOverGameObject()) return;
+        //if(EventSystem.current.IsPointerOverGameObject()) return;
         
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
         RaycastHit raycastHit;
