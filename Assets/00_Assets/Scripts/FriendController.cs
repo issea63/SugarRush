@@ -50,7 +50,6 @@ public class FriendController : MonoBehaviour
     private void Update()
     {
         BossManager boss = BossManager.Instance;
-        FindEnemy();
         float distance = Vector3.Distance(target.position, transform.position);
         if (BossManager.Instance != null && boss.enabled)
         {
@@ -74,6 +73,7 @@ public class FriendController : MonoBehaviour
             }
             else
             {
+                FindEnemy();
                 agent.speed = 2.5f;
                 agent.SetDestination(target.position);
             }

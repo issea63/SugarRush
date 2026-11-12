@@ -100,7 +100,7 @@ public class PowersManager : MonoBehaviour
     }
     public IEnumerator ShootRoutine(RaycastHit ray)
     {
-        animator.SetTrigger("Spell");
+        //animator.SetTrigger("Spell");
         motor.target = ray.collider.transform;
         motor.rotationCorrect = false;
 
@@ -134,7 +134,7 @@ public class PowersManager : MonoBehaviour
     }
     public IEnumerator MultiShotRoutine(RaycastHit ray)
     {
-        animator.SetTrigger("Spell");
+        //animator.SetTrigger("Spell");
         motor.target = ray.collider.transform;
 
         motor.rotationCorrect =false;
@@ -159,7 +159,7 @@ public class PowersManager : MonoBehaviour
     {
         if (healCooldown <= 0 && mana >= 50 && powerUp3)
         {
-            animator.SetTrigger("Heal");
+            //animator.SetTrigger("Heal");
             gameObject.GetComponent<PlayerStats>().SetHealth(30);
             healCooldown = 20f;
             mana -= 50;
