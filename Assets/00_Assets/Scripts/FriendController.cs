@@ -8,7 +8,7 @@ public class FriendController : MonoBehaviour
     public Transform navMesh;
     public float lookRadius = 10f;
     public NavMeshSurface nav;
-
+    public float bossAttackRange = 2f;
     Transform target;
     NavMeshAgent agent;
     public CharacterCombat characterCombat;
@@ -51,33 +51,30 @@ public class FriendController : MonoBehaviour
     {
         BossManager boss = BossManager.Instance;
         float distance = Vector3.Distance(target.position, transform.position);
-        if (BossManager.Instance != null && boss.enabled)
+        BossManager bossManager = BossManager.Instance;
+        if (bossManager != null && bossManager.enabled)
         {
-            if (boss.enabled)
-            {
-                target = boss.transform;
-                Transform bossTrans = BossManager.Instance.boss.transform;
+            if (bossManager.boss == null)
+                return;
 
-                agent.speed = 5f;
-                agent.SetDestination(bossTrans.position);
+            Transform bossTransform = bossManager.boss.transform;
+            target = bossTransform;
 
-                if (distance <= agent.stoppingDistance)
-                {
-                    BossStats ChStats = BossManager.Instance.GetComponent<BossStats>();
-                    if (ChStats != null)
-                    {
-                        Debug.Log("AtaqueBoss");
-                        characterCombat.Attack(ChStats);
-                    }
-                }
-            }
-            else
+            agent.speed = 5f;
+            agent.SetDestination(bossTransform.position);
+
+            float distanceToBoss = Vector3.Distance(
+                transform.position,
+                bossTransform.position
+            );
+            BossStats bossStats = bossManager.GetComponent<BossStats>();
+
+            if (bossStats != null && distanceToBoss <= bossAttackRange)
             {
-                FindEnemy();
-                agent.speed = 2.5f;
-                agent.SetDestination(target.position);
+                characterCombat.Attack(bossStats);
             }
 
+            return;
         }
         else if (enemyController != null)
         {
@@ -99,6 +96,7 @@ public class FriendController : MonoBehaviour
         }
         else
         {
+            FindEnemy();
             agent.speed = 2.5f;
             agent.SetDestination(target.position);
         }

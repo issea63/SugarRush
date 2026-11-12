@@ -14,5 +14,5 @@ public class Equipment : Item
         EquipmentManager.Instance.gameObjectsToActivate[(int)slot].SetActive(true);
         RemoveFromInventory();
     }
-    public enum EquipmentSlot {Head, Shoulder,shoes}
+    public enum EquipmentSlot {Head, Gorputza, ArmaEzpata, ArmaLollipop}
 }

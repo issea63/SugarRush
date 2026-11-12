@@ -64,7 +64,7 @@ public class EquipmentManager : MonoBehaviour
 
     private void FindObjectsAndApplyState()
     {
-        parent = GameObject.Find("Starter_P");
+        parent = GameObject.Find("pertsonaia_animazioak1");
 
         if (parent == null)
         {
@@ -78,16 +78,12 @@ public class EquipmentManager : MonoBehaviour
         {
             switch (t.name)
             {
-                case "Starter_Helmet_P":
+                case "Kasko":
                     gameObjectsToActivate[0] = t.gameObject;
                     break;
 
-                case "Starter_Boots_P":
+                case "Armadura":
                     gameObjectsToActivate[1] = t.gameObject;
-                    break;
-
-                case "Starter_Shoulders_P":
-                    gameObjectsToActivate[2] = t.gameObject;
                     break;
             }
         }

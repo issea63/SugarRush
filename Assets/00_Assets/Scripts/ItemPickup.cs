@@ -7,11 +7,13 @@ public class ItemPickup : Interactable
     private void Start()
     {
         player = PlayerManager.Instance.player.transform;
+        gameObject.AddComponent<ItemRotate>();
         if (item.itemName == "BagCoins")
         {
             item.coinAmount = 0;
         }
     }
+
     public override void Interact()
     {
         base.Interact();
