@@ -11,22 +11,22 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/00_Assets/Scenes/ScenePrueba2.unity
     guid: b13cd9497d3b43a459eba7a5e00dfdd8
-  - enabled: 0
+  - enabled: 1
     path: Assets/00_Assets/Scenes/MainMenu.unity
     guid: 4d6a29b2a6be3264b8759025a56f6c4c
-  - enabled: 0
+  - enabled: 1
     path: Assets/00_Assets/EszenaLaia/Laia.unity
     guid: 67e2568bebd426c499bdc16ac2de4923
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Assets/Scenes/EscenaAketza.unity
     guid: 3e87e5dcbb2e88844accd94b4c1e159b
-  - enabled: 0
+  - enabled: 1
     path: Assets/00_Assets/Scenes/LoseScene.unity
     guid: 3203f1a9de3b4104dac2418903600f0d
-  - enabled: 0
+  - enabled: 1
     path: Assets/00_Assets/Scenes/LoseSceneBoss.unity
     guid: b7d3b1e5a7ad62748a8674f999858cbe
-  - enabled: 0
+  - enabled: 1
     path: Assets/00_Assets/Scenes/Win.unity
     guid: e1cf7e24ca6bac74bbf7b6ceb9dcc1ef
   m_configObjects:
