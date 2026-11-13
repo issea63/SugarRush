@@ -50274,6 +50274,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   manaBottle: {fileID: 0}
+  shootAction: {fileID: 0}
 --- !u!4 &3239438719894976121
 Transform:
   m_ObjectHideFlags: 0
@@ -51881,6 +51882,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.000011099058
       objectReference: {fileID: 0}
+    - target: {fileID: 9029592216889306987, guid: 10baa75ba902721468173e808757a330, type: 3}
+      propertyPath: shootAction
+      value: 
+      objectReference: {fileID: -3535290290224832054, guid: afb831665b0a9f542a1ba657b3e5cdb6, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

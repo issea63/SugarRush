@@ -44,7 +44,7 @@ public class FriendManager : MonoBehaviour
         GameObject spawnPoint = GameObject.FindWithTag("SpawnPoint");
         if (spawnPoint == null)
         {
-            Debug.LogError("Null");
+            //Debug.LogError("Null");
             return;
         }
 

@@ -8007,6 +8007,10 @@ PrefabInstance:
       propertyPath: damageText
       value: 
       objectReference: {fileID: 2396652854241237718}
+    - target: {fileID: 3172811304650842755, guid: a4d4ac4b9582ea14986ea44b66bf1547, type: 3}
+      propertyPath: shootAction
+      value: 
+      objectReference: {fileID: -3535290290224832054, guid: afb831665b0a9f542a1ba657b3e5cdb6, type: 3}
     - target: {fileID: 3335722954311088627, guid: a4d4ac4b9582ea14986ea44b66bf1547, type: 3}
       propertyPath: m_Name
       value: Player
