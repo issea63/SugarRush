@@ -12,6 +12,7 @@ public class PlayerMotor : MonoBehaviour
     public bool rotationCorrect = false;
 
     private NavMeshAgent agent;
+    public AudioSource walkSound;
 
     private void Awake()
     {
@@ -40,6 +41,7 @@ public class PlayerMotor : MonoBehaviour
         if (moveOn && target != null)
         {
             agent.SetDestination(target.position);
+            walkSound.Play();
         }
     }
 
@@ -49,6 +51,7 @@ public class PlayerMotor : MonoBehaviour
             return;
 
         agent.SetDestination(point);
+        walkSound.Play();
     }
 
     public void FollowTarget(Interactable newTarget)
@@ -63,6 +66,7 @@ public class PlayerMotor : MonoBehaviour
             agent.stoppingDistance = newTarget.radius * 0.8f;
             agent.updateRotation = false;
         }
+        walkSound.Play();
     }
 
     public void StopFollowTarget()
@@ -75,6 +79,7 @@ public class PlayerMotor : MonoBehaviour
 
         target = null;
         rotationCorrect = false;
+        walkSound.Stop();
     }
 
     public void FaceTarget()

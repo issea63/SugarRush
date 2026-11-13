@@ -72,6 +72,8 @@ public class PowersManager : MonoBehaviour
     }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.T)) Debug.Log("T pulsada");
+        if (Keyboard.current.fKey.wasPressedThisFrame) Debug.Log("F pulsada");
         if (mana >= 100) { mana = 100; }
         if (mana <= 100) { mana += Time.deltaTime; }
         if (shotCooldown >= 0) { shotCooldown -= Time.deltaTime; image1.fillAmount = shotCooldown / 1; } else { shotCooldown = 0; }

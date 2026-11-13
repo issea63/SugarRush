@@ -3507,6 +3507,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3416017687876581140, guid: ea241ea164e56f448a0619595de9e172, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3648483534182446871, guid: ea241ea164e56f448a0619595de9e172, type: 3}
       propertyPath: lookRadius
       value: 2
@@ -3580,7 +3584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1022537746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4410,7 +4414,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1375516623
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7432,6 +7436,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5132905997529440758, guid: 4921cd0fba478f04cbbe0ef0116b7870, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7482,6 +7490,10 @@ PrefabInstance:
     - target: {fileID: 6928177307711469811, guid: 9aece62912ece654dad3de14b403732c, type: 3}
       propertyPath: m_Name
       value: EquipmentManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928177307711469811, guid: 9aece62912ece654dad3de14b403732c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7517472287712503289, guid: 9aece62912ece654dad3de14b403732c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7942,6 +7954,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 1018998587108605724, guid: 92e8fe3da30ef96408bf25e58a0b655e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3982618506922700259, guid: 92e8fe3da30ef96408bf25e58a0b655e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 643.62506
@@ -7982,6 +7998,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7305633431590093560, guid: 92e8fe3da30ef96408bf25e58a0b655e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8004,9 +8024,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2238350132506816192}
     - target: {fileID: 1186066388798011933, guid: a4d4ac4b9582ea14986ea44b66bf1547, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186066388798011933, guid: a4d4ac4b9582ea14986ea44b66bf1547, type: 3}
       propertyPath: damageText
       value: 
       objectReference: {fileID: 2396652854241237718}
+    - target: {fileID: 1211612570959840203, guid: a4d4ac4b9582ea14986ea44b66bf1547, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856983849087598225, guid: a4d4ac4b9582ea14986ea44b66bf1547, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2606419909916341106, guid: a4d4ac4b9582ea14986ea44b66bf1547, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2634249497890353450, guid: a4d4ac4b9582ea14986ea44b66bf1547, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172811304650842755, guid: a4d4ac4b9582ea14986ea44b66bf1547, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3172811304650842755, guid: a4d4ac4b9582ea14986ea44b66bf1547, type: 3}
       propertyPath: shootAction
       value: 
@@ -8054,6 +8098,10 @@ PrefabInstance:
     - target: {fileID: 3494467127832425196, guid: a4d4ac4b9582ea14986ea44b66bf1547, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668568126791272045, guid: a4d4ac4b9582ea14986ea44b66bf1547, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8123,6 +8171,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FriendManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2223214980104480340, guid: 162874a26b2926043a6e1128ab8d77c7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8179,6 +8231,10 @@ PrefabInstance:
     - target: {fileID: 2361159743821899504, guid: e3f884ddaf79d1d41961b865c74f2d74, type: 3}
       propertyPath: m_Name
       value: Bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361159743821899504, guid: e3f884ddaf79d1d41961b865c74f2d74, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
