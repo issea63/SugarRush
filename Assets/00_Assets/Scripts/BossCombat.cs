@@ -9,6 +9,7 @@ public class BossCombat : MonoBehaviour
     public float animation2 = 2f;
     public float attackDuration = 3f;
     public float attackDuration2 = 3f;
+    public bool waitTimer;
 
     public int attackRange;
     public GameObject beamDanger;
@@ -26,8 +27,11 @@ public class BossCombat : MonoBehaviour
     }
     private void Update()
     {
-        attackCooldown -= Time.deltaTime;
-        if(attackCooldown <= 0)
+        if(waitTimer == false)
+        {
+            attackCooldown -= Time.deltaTime;
+        }
+        if (attackCooldown <= 0)
         {
             attackRange = Random.Range(1, 3);
             StartCoroutine("AttackRoutine");
@@ -40,6 +44,7 @@ public class BossCombat : MonoBehaviour
         switch (attackRange)
         {
             case 1:
+                waitTimer = true;
                 animator.SetBool("SetIdle", false);
                 animator.SetTrigger("Attack1");
                 yield return new WaitForSeconds(animation1);
@@ -53,14 +58,17 @@ public class BossCombat : MonoBehaviour
                     collider.SetActive(false);
                 }
                 animator.SetBool("SetIdle", true);
+                waitTimer = false;
                 break;
             case 2:
                 if(BossManager.Instance.gameObject.GetComponent<BossStats>().secondPhase)
                 {
+                    waitTimer = true;
                     Debug.Log("attack2");
                     animator.SetBool("SetIdle", false);
                     animator.SetTrigger("Attack2");
                     yield return new WaitForSeconds(animation2);
+                    animator.SetBool("SetIdle", true);
                     Instantiate(beamDanger, PlayerManager.Instance.gameObject.transform.position, Quaternion.identity);
                     yield return new WaitForSeconds(1.5f);
                     Transform danger = GameObject.Find("BeamDanger(Clone)").transform;
@@ -68,17 +76,20 @@ public class BossCombat : MonoBehaviour
                     Instantiate(beamAttack, spawnPosition, beamAttack.transform.localRotation);
                     Destroy(GameObject.Find("BeamDanger(Clone)"));
                     yield return new WaitForSeconds(1.5f);
+                    animator.SetBool("SetIdle", false);
+                    animator.SetTrigger("Attack2");
                     Instantiate(beamDanger, PlayerManager.Instance.gameObject.transform.position, Quaternion.identity);
                     yield return new WaitForSeconds(1.5f);
+                    animator.SetBool("SetIdle", true);
                     Transform danger2 = GameObject.Find("BeamDanger(Clone)").transform;
                     Vector3 spawnPosition2 = danger2.position + Vector3.up * 10f;
                     Instantiate(beamAttack, spawnPosition2, beamAttack.transform.localRotation);
                     Destroy(GameObject.Find("BeamDanger(Clone)"));
-                    animator.SetTrigger("Attack2");
-                    animator.SetBool("SetIdle", true);
+                    waitTimer = false;
                 }
                 else
                 {
+                    waitTimer = true;
                     animator.SetBool("SetIdle", false);
                     animator.SetTrigger("Attack1");
                     yield return new WaitForSeconds(animation1);
@@ -92,7 +103,7 @@ public class BossCombat : MonoBehaviour
                         collider.SetActive(false);
                     }
                     animator.SetBool("SetIdle", true);
-                    animator.SetBool("SetIdle", true);
+                    waitTimer = false;
                 }
                 break;
         }
