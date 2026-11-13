@@ -15,7 +15,7 @@ MonoBehaviour:
   coinNumber: {fileID: 0}
   coinAmount: 0
   itemName: Armadura
-  icon: {fileID: 21300000, guid: cfd3bb9629988c4459cca26618d61646, type: 3}
+  icon: {fileID: 21300000, guid: 5446c30fd1ff40541bfbffcb7d1ff105, type: 3}
   canShowInInventory: 1
   damageMod: 0
   armorMod: -10
