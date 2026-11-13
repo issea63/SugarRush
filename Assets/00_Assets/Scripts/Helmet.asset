@@ -15,7 +15,7 @@ MonoBehaviour:
   coinNumber: {fileID: 0}
   coinAmount: 0
   itemName: Default Item
-  icon: {fileID: 21300000, guid: cfd3bb9629988c4459cca26618d61646, type: 3}
+  icon: {fileID: 21300000, guid: 0a67072e6bcd85e4db533581076f7b12, type: 3}
   canShowInInventory: 1
   damageMod: 0
   armorMod: -5
