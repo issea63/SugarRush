@@ -67,7 +67,14 @@ public class PlayerStats : CharacterStats
         PlayerManager.Instance.GetComponent<PlayerController>().enabled = false;
         animator.SetTrigger("Die");
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("LoseScene");
+        if(BossManager.Instance != null)
+        {
+            SceneManager.LoadScene("LoseSceneBoss");
+        }
+        else
+        {
+            SceneManager.LoadScene("LoseScene");
+        }
     }
 
     private void UpdateText()

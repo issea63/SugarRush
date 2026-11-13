@@ -34,7 +34,7 @@ public class BossStats : CharacterStats
     public IEnumerator DieRoutineBoss()
     {
         animator.SetTrigger("Die");
-        yield return new WaitForSeconds(4f);
-        SceneManager.LoadScene("WinScene");
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("Win");
     }
 }
