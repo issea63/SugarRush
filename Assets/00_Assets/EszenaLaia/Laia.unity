@@ -51179,6 +51179,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4428264293530603032, guid: 10baa75ba902721468173e808757a330, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 4599308018639266253}
+    - target: {fileID: 4428264293530603032, guid: 10baa75ba902721468173e808757a330, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 263694830}
@@ -51187,6 +51191,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10baa75ba902721468173e808757a330, type: 3}
+--- !u!95 &4599308018639266253 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5263377362899607368, guid: 10baa75ba902721468173e808757a330, type: 3}
+  m_PrefabInstance: {fileID: 4599308018639266252}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &4608380684522312696
 MeshFilter:
   m_ObjectHideFlags: 0
