@@ -9,6 +9,7 @@ public class CharacterCombat : MonoBehaviour
     public AnimationClip clip;
     public Animator animator;
     public CharacterStats stats;
+
     private void Start()
     {
         stats = GetComponent<CharacterStats>();
