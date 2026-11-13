@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fbebca6fda928d24c9f317b022c4b3bd
+guid: 268cf297131673b48a6cca92c9c86133
 ModelImporter:
   serializedVersion: 24600
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: defaultMat
-    second: {fileID: 2100000, guid: 6ef1aa748ccdd9d4090052bf4ea2bbbb, type: 2}
+      name: Mamut
+    second: {fileID: 2100000, guid: f235afd0f1e8016428c31c4ce9ac1553, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -54,7 +54,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1

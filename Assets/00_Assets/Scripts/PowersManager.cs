@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PowersManager : MonoBehaviour
@@ -39,6 +40,8 @@ public class PowersManager : MonoBehaviour
     public LayerMask interactLayer;
     PlayerMotor motor;
     public Image manaBottle;
+
+    public InputActionReference shootAction;
     
     #region Singleton
     public static PowersManager Instance;
@@ -65,9 +68,12 @@ public class PowersManager : MonoBehaviour
         dashCooldown = 0;
         attackCooldown = 0;
         mana = 100f;
+        shootAction.action.Enable();
     }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.T)) Debug.Log("T pulsada");
+        if (Keyboard.current.fKey.wasPressedThisFrame) Debug.Log("F pulsada");
         if (mana >= 100) { mana = 100; }
         if (mana <= 100) { mana += Time.deltaTime; }
         if (shotCooldown >= 0) { shotCooldown -= Time.deltaTime; image1.fillAmount = shotCooldown / 1; } else { shotCooldown = 0; }
@@ -79,9 +85,13 @@ public class PowersManager : MonoBehaviour
         if (attackCooldown >= 0) { attackCooldown -= Time.deltaTime; image4.fillAmount = attackCooldown / 15; } else { attackCooldown = 0; }
         ManaUpdate();
     }
-
+    public void OnReload()
+    {
+        SceneManager.LoadScene("ScenePrueba1");
+    }
     public void OnShoot()
     {
+        Debug.Log("sxfsf");
         if (shotCooldown <= 0 && mana >= 5 && powerUp1)
         {
             motor.moveOn = false;
