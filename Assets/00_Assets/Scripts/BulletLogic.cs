@@ -3,6 +3,7 @@ using UnityEngine.SocialPlatforms;
 
 public class BulletLogic : MonoBehaviour
 {
+    public AudioSource source;
     public float bulletSpeed = 2f;
     Rigidbody rb;
     private void Start()
@@ -24,6 +25,7 @@ public class BulletLogic : MonoBehaviour
             {
                 other.GetComponent<Enemy>().enemycanvas.SetActive(true);
                 other.GetComponent<EnemyController>().lookRadius = 10000000f;
+                source.Play();
                 Destroy(gameObject);
             }
         }

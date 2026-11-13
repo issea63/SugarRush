@@ -56,7 +56,7 @@ public class PlayerStats : CharacterStats
         }
         UpdateText();
     }
-
+    public AudioSource die;
     public override void Die()
     {
         base.Die();
@@ -66,6 +66,7 @@ public class PlayerStats : CharacterStats
     {
         PlayerManager.Instance.GetComponent<PlayerController>().enabled = false;
         animator.SetTrigger("Die");
+        die.Play();
         yield return new WaitForSeconds(1.5f);
         if(BossManager.Instance != null)
         {

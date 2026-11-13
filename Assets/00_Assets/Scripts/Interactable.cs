@@ -34,6 +34,7 @@ public class Interactable : MonoBehaviour
         player = null;
         amIFocused = false;
     }
+    public AudioSource pickupSound;
 
     public virtual void Interact()
     {

@@ -730,9 +730,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d065997437c89e74eb6b531ee1302809, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4428264293530603032}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d065997437c89e74eb6b531ee1302809, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9029592216889306987}
   m_SourcePrefab: {fileID: 100100000, guid: d065997437c89e74eb6b531ee1302809, type: 3}
 --- !u!1 &1486392021890047880 stripped
 GameObject:
@@ -823,6 +820,7 @@ MonoBehaviour:
   target: {fileID: 0}
   moveOn: 0
   rotationCorrect: 0
+  walkSound: {fileID: 0}
 --- !u!114 &7027819319374822356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -917,40 +915,6 @@ MonoBehaviour:
   animator: {fileID: 0}
   damageText: {fileID: 0}
   armorText: {fileID: 0}
---- !u!114 &9029592216889306987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1486392021890047880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b90dca1b84b4b6c47b5d16e94154cc37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PowersManager
-  bullet: {fileID: 2361159743821899504, guid: e3f884ddaf79d1d41961b865c74f2d74, type: 3}
-  bulletOrigin: {fileID: 1315568726845848188}
-  originsMultiple:
-  - {fileID: 1315568726845848188}
-  - {fileID: 1376906112588630357}
-  - {fileID: 572742984326912383}
-  mana: 100
-  powerUp1: 1
-  powerUp2: 1
-  powerUp3: 1
-  powerUp4: 1
-  powerUp5: 1
-  image1: {fileID: 0}
-  image2: {fileID: 0}
-  image3: {fileID: 0}
-  image4: {fileID: 0}
-  image5: {fileID: 0}
-  animator: {fileID: 0}
-  interactLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  manaBottle: {fileID: 0}
 --- !u!4 &2300047516559426866 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d065997437c89e74eb6b531ee1302809, type: 3}

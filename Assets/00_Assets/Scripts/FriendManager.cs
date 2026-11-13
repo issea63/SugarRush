@@ -15,6 +15,9 @@ public class FriendManager : MonoBehaviour
     #endregion
 
     public GameObject friendPrefab;
+    public GameObject friendPrefab2;
+    public GameObject friendPrefab3;
+    public int randomRange;
     public Transform spawnPoint;
     public FriendController[] controllers;
     public int previousControllerCount;
@@ -50,7 +53,21 @@ public class FriendManager : MonoBehaviour
 
         for (int i = 0; i < previousControllerCount; i++)
         {
-            Instantiate(friendPrefab, spawnPoint.transform.position,spawnPoint.transform.rotation);
+            int prefabIndex = Random.Range(0, 4);
+            GameObject prefab = null;
+            switch (prefabIndex)
+            {
+                case 0:
+                    prefab = friendPrefab;
+                    break;
+                case 1:
+                    prefab = friendPrefab2;
+                    break;
+                case 2:
+                    prefab = friendPrefab3;
+                    break;
+            }
+            Instantiate(prefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
         }
     }
 }

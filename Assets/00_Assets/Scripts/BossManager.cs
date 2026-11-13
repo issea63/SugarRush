@@ -11,6 +11,8 @@ public class BossManager : MonoBehaviour
     }
     public GameObject boss;
     #endregion
+    public AudioSource normalMusic;
+    public AudioSource bossMusic;
     private void Start()
     {
         BossCombat combat = GetComponent<BossCombat>();
@@ -19,5 +21,7 @@ public class BossManager : MonoBehaviour
         combat.enabled = true;
         boss.enabled = true;
         stats.enabled = true;
+        normalMusic.Stop();
+        bossMusic.Play();
     }
 }

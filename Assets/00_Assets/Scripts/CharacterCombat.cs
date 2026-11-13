@@ -9,9 +9,11 @@ public class CharacterCombat : MonoBehaviour
     public AnimationClip clip;
     public Animator animator;
     public CharacterStats stats;
+    public AudioSource attackSound;
 
     private void Start()
     {
+        attackSound = GameObject.Find("AttackSound").GetComponent<AudioSource>();
         stats = GetComponent<CharacterStats>();
     }
     private void Update()
@@ -32,6 +34,8 @@ public class CharacterCombat : MonoBehaviour
     {
         animator.SetTrigger("Attack");
         yield return new WaitForSeconds(.8f);
+        attackSound.pitch = Random.Range(1, 2.60f);
+        attackSound.Play();
         targetStats.SetHealth(stats.damage.GetValue());
         yield break;
     }
